@@ -1,5 +1,8 @@
-.title {
+.jumbotron, .titleHead {
     width: 100%;
     text-align: center;
-    border: solid;
+    
+    font-family: 'Special Elite', cursive;
+    background: black;
+    color: white;
 }

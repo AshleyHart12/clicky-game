@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 
 let correctGuesses = 0;
@@ -80,9 +80,19 @@ this.setState({friends});
 };
 
   render() {
+    const { message, score, friends, topScore } = this.state;
     return (
-      <Wrapper>
-        {/* <Title>Who do you want on your team?!</Title>  */}
+      <div className="fluid-container">
+      <NavBar
+      className="row"
+      score={score}
+      topScore={topScore}
+      message={message}
+      />
+      
+      <Title className="bg-header row" />
+
+        <div className="d-flex justify-content-center main-content mx-auto padding-main flex-wrap row">
         {this.state.friends.map(match => (
           // eslint-disable-next-line no-unused-expressions
           <FriendCard
@@ -92,8 +102,11 @@ this.setState({friends});
           image={match.image}
           />
         ))}
+  </div>
+      
+  <Footer className="footer-mgn row" />
 
-      </Wrapper>
+      </div>
     );
   }
 } // ENDS COMPONENT
