@@ -5,6 +5,7 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import NavBar from "./components/NavBar";
 
 
 let correctGuesses = 0;
@@ -81,7 +82,7 @@ this.setState({friends});
   render() {
     return (
       <Wrapper>
-        <Title>Who do you want on your team?!</Title> 
+        {/* <Title>Who do you want on your team?!</Title>  */}
         {this.state.friends.map(match => (
           // eslint-disable-next-line no-unused-expressions
           <FriendCard
