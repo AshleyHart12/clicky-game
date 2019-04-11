@@ -13,7 +13,7 @@ function NavBar({ message, score, topScore }) {
             className="col list-inline-item my-auto nav-calc-font m-0 p-0 text-center"
           >
             {message} <br/>
-            Click on all the images only ONCE
+            Try to click on all images only ONCE
           </li>
           </div>
           <div className="col-sm-4">
@@ -21,11 +21,11 @@ function NavBar({ message, score, topScore }) {
            Click the same one twice, start over!
           </li>
           </div>
-          <div className="col-sm-4">
+          {/* <div className="col-sm-4">
           <li className="col list-inline-item my-auto nav-calc-font m-0 p-0 score-li-width text-right">
             SCORE: {score} <br></br> HIGH SCORE: {topScore}
           </li>
-          </div>
+          </div> */}
         </ul>
       </nav>
       </div>

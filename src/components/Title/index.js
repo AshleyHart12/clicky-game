@@ -9,6 +9,12 @@ function Title() {
         <h1 className="titleHead">
           Crossfit Throwdown
         </h1>
+        <br></br>
+        <h3>
+        Current Score: 
+        <br></br>
+        Best Score: 
+      </h3>
       </div>
     );
   }

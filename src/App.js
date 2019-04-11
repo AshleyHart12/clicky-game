@@ -24,7 +24,7 @@ state = {
 setClicked = id => {
   const friends = this.state.friends;
 
-  const clickedfriends = friends.filter(friends => friends.id === id);
+  const clickedfriends = friends.filter(friend => friend.id === id);
 
 if (clickedfriends[0].clicked) {
   console.log(correctGuesses);
@@ -80,19 +80,19 @@ this.setState({friends});
 };
 
   render() {
-    const { message, score, friends, topScore } = this.state;
+    const { message, bestScore, friends, correctGuesses } = this.state;
     return (
       <div className="fluid-container">
-      <NavBar
-      className="row"
-      score={score}
-      topScore={topScore}
-      message={message}
-      />
-      
-      <Title className="bg-header row" />
+      {/* <NavBar /> */}
+    
+        
+      <Title className="bg-header row">
+      correctGuesses={this.state.correctGuesses}
+        
+      bestScore={this.state.bestScore}
+      </Title>
 
-        <div className="d-flex justify-content-center main-content mx-auto padding-main flex-wrap row">
+      <div className="d-flex justify-content-center main-content mx-auto flex-wrap row">
         {this.state.friends.map(match => (
           // eslint-disable-next-line no-unused-expressions
           <FriendCard
@@ -102,7 +102,7 @@ this.setState({friends});
           image={match.image}
           />
         ))}
-  </div>
+      </div>
       
   <Footer className="footer-mgn row" />
 
