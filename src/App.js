@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import FriendCard from "./components/FriendCard";
 import Title from "./components/Title";
 import friends from "./friends.json";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
 
@@ -69,7 +69,7 @@ this.setState({friends});
     friends[i].clicked = false;
   }
 
-  friends.sort(function(a,b) {
+  friends.sort(function() {
     return 0.5 - Math.random()
   });
 
@@ -80,17 +80,17 @@ this.setState({friends});
 };
 
   render() {
-    const { message, bestScore, friends, correctGuesses } = this.state;
     return (
       <div className="fluid-container">
       {/* <NavBar /> */}
     
         
-      <Title className="bg-header row">
-      correctGuesses={this.state.correctGuesses}
-        
-      bestScore={this.state.bestScore}
-      </Title>
+      <Title className="bg-header row"
+        score={correctGuesses}
+        bestSCore={bestScore}
+      
+      />
+    
 
       <div className="d-flex justify-content-center main-content mx-auto flex-wrap row">
         {this.state.friends.map(match => (
