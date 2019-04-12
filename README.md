@@ -1,8 +1,9 @@
-###### Crossfit Throwdown: Memory Game
+# Crossfit Throwdown: Memory Game
   
-  ## Try to click every picture only once. If you click an image twice, you lose!
+  #### Try to click every picture only once. If you click an image twice, you lose!
   
- <h5>How to Play:
+#### How to Play:
+<hr>
  
   * View the game here: https://ashleyhart12.github.io/clicky-game/ 
   * click on any character tile
