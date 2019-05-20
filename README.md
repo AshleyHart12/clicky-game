@@ -10,6 +10,8 @@
   * Keep clicking tiles, but not the same once twice!
   * Keep going to see if you can click all 8 without duplciating
   
+ ![website image](clickGame.png)
+  
 #### Built With:
 * React
 * Javascript
